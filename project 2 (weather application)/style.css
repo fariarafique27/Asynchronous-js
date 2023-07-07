@@ -1,0 +1,60 @@
+*
+{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+   
+    
+}
+body
+{
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:100vh;
+    
+}
+.container
+{
+    
+width:40%;
+margin-top:10%;
+padding:2rem;
+border-radius: 10px;
+}
+.input
+{
+    border-radius:.2em;
+    border:1px solid  grey ;
+    width:80%;
+    padding:.2em;
+    margin-bottom:.5rem;
+
+}
+.weather
+{
+    text-align:center;
+    display: none;
+
+}
+.dark-mode .container
+{
+background: #333 !important ;
+color: aliceblue !important;
+}
+.details
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ img{
+    width: 20%;
+    height:15%;
+}
+.temp{
+    margin-left: 0px;
+}
+.error
+{
+    display: none;
+}

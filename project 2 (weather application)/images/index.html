@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Weather Application</title>
+</head>
+<body id="body" class="bg-image" 
+style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg')">
+    <div class="mode-btn d-flex mt-2 ">
+        <button id="toggleModeBtn" class="btn btn-danger w-15 fa-solid fa-toggle-on mt-4"></button>
+     </div>
+    
+    <div class="container bg-light" id="container">
+        
+        <h1>Weather Forcast </h1>
+        <div>
+            <input type="text" class="input" id="input" placeholder="Enter City Name">
+        <button id="btn"class="btn btn-danger mb-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="error ">
+            <p>Invalid city Name</p>
+        </div>
+       
+     <div class="weather">
+        <img src="images/sunny-cloudy.png" id="weather-icon">
+        <h3 id="cityName" class="mb-3 mt-3">newyork </h3>
+        <h5 id="date" class="mb-2"> ** - ** - ****</h5>
+        <h2 id="temperature" class="mb-2" > </h2>
+        <div class="details">
+            <div class="temp">
+                <h6 id ="weather" class="mb-2">sunny </h6>
+                
+            </div>
+            <div class="humidity">
+                <h6 id ="humidity" class="mb-2">22% </h6>
+                <i class="fa-solid fa-water"></i>
+               </div>
+        </div>
+  
+     </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
