@@ -8,6 +8,7 @@ let weatherEl = document.getElementById("weather");
 let weatherIcon = document.getElementById("weather-icon");
 let error = document.getElementById("error");
 let toggleModeBtn = document.getElementById("toggleModeBtn");
+let body = document.getElementById("body");
 
 
 
@@ -27,11 +28,12 @@ promise
        return response.json();
 })
 .then((response)=>{
+    console.log(response);
        const {main}=response;
        const {description}=response;
        cityName.innerText= cityname;
        updateClock();
-       temperature.innerText=(main.feels_like+ " 'c");
+       temperature.innerText=(main.temp+ " 'c");
        humidity.innerText= ("Humidity:" + main.humidity + " %" );
        weatherEl.innerText=description;
      
@@ -41,23 +43,31 @@ promise
 if (weatherCondition === "Clear") {
     weatherEl.innerText="It's sunny!";
     weatherIcon.src="images/sunny.png";
+    body.style.backgroundImage = "url('images/sunny-bg.png')";
 
 }
  else if (weatherCondition === "Clouds") {
     weatherEl.innerText="It's cloudy!";
     weatherIcon.src="images/cloudy.png";
+    body.style.backgroundImage = "url('images/cloudy-bg.png')";
+}
+else if (weatherCondition === "Smoke") {
+    weatherEl.innerText = "It's Smoky!";
+    weatherIcon.src = "images/Smoke.png";
+    body.style.backgroundImage = "url('images/Smoke-bg.png')";
+}
 
-   
-} 
  else if (weatherCondition === "Rain") {
     weatherEl.innerText="It's Rainy!";
     weatherIcon.src="images/rainy.png";
+    body.style.backgroundImage = "url('images/weather/images/rainy-bg.png')";
     
    
 } 
  else if (weatherCondition === "Mist") {
     weatherEl.innerText="It's Misty!";
     weatherIcon.src="images/misty.png";
+    body.style.backgroundImage = "url('images/misty-bg.png')";
     
    
 } 
@@ -72,6 +82,8 @@ else {
   
   document.querySelector('.error').style.display = "none";
   document.querySelector('.weather').style.display= "block";
+  body.style.backgroundImage = "url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg')";
+  input.value =" ";
 };
 
 button.addEventListener('click' , function(e)
